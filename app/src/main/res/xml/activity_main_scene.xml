@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="6000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/end"
+        motion:duration="6000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/ball"
+            android:layout_width="12dp"
+            motion:layout_editor_absoluteY="-241dp"
+            android:layout_height="413dp">
+            <Layout
+                android:background="@drawable/shape_ball_example"
+                android:clipToOutline="true"
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                motion:layout_constraintBottom_toBottomOf="@+id/human1"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
